@@ -1,37 +1,43 @@
-#  A simple example implementing a MapBox map in a React component. 
+# 🗺️ Mapbox Basic Implementation with React
 
-### Usage
+## A simple example implementing a Mapbox map in a React component, powered by Vite and Docker.
 
-1. Clone the repository:
+### 🚀 Usage
+
+1. Clone the repository
 
 ```
 git clone https://github.com/szidzse/mapbox-basic-implementation.git
+cd mapbox-basic-implementation
 ```
 
-2. Create a '.env' file in the project folder, then create an environment variable called 'VITE_MAPBOX_ACCESS_TOKEN':
+2. Set up environment variables
 
-```
-VITE_MAPBOX_ACCESS_TOKEN=
-```
-
-3. Go to https://www.mapbox.com/ and create an account. Get your Access Token, then set the value of 'VITE_MAPBOX_ACCESS_TOKEN' to:
-
-It should look like this: 
+Create a .env file in the root of the project, and add your Mapbox access token (🔑 You can get your access token by signing up at https://www.mapbox.com):
 
 ```
 VITE_MAPBOX_ACCESS_TOKEN=<YOUR_MAPBOX_ACCESS_TOKEN>
 ```
 
-4. Build an image based on the Dockerfile:
+3. Build the Docker image
 
 ```
 docker build -t my-map-app .
 ```
 
-5. Run the container: 
+4. Run the Docker container
 
 ```
-docker run -p 5173:5173 vite-app
+docker run -p 5173:5173 my-map-app
 ```
 
-6. Open your browser on http://localhost:5173:
+5. Open the app
+
+```
+🌐 Go to http://localhost:5173 in your browser.
+```
+
+6. 🖼️ Preview
+
+Here’s what the app looks like in action:
+
