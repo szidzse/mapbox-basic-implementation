@@ -1,12 +1,37 @@
-# React + Vite
+#  A simple example implementing a MapBox map in a React component. 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Usage
 
-Currently, two official plugins are available:
+1. Clone the repository:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```
+git clone https://github.com/szidzse/mapbox-basic-implementation.git
+```
 
-## Expanding the ESLint configuration
+2. Create a '.env' file in the project folder, then create an environment variable called 'VITE_MAPBOX_ACCESS_TOKEN':
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+VITE_MAPBOX_ACCESS_TOKEN=
+```
+
+3. Go to https://www.mapbox.com/ and create an account. Get your Access Token, then set the value of 'VITE_MAPBOX_ACCESS_TOKEN' to:
+
+It should look like this: 
+
+```
+VITE_MAPBOX_ACCESS_TOKEN=<YOUR_MAPBOX_ACCESS_TOKEN>
+```
+
+4. Build an image based on the Dockerfile:
+
+```
+docker build -t my-map-app .
+```
+
+5. Run the container: 
+
+```
+docker run -p 5173:5173 vite-app
+```
+
+6. Open your browser on http://localhost:5173:
